@@ -1,0 +1,42 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+<input name="RA_ck01" type="checkbox" value="1" />
+<input name="RA_ck01" type="checkbox" value="2" />
+<input name="RA_ck01" type="checkbox" value="3" />
+<input name="RA_ck01" type="checkbox" value="4" />
+<input name="show" type="button" value="確認" onclick="ShowFun()" />
+
+<script type="text/javascript">
+    function ShowFun() {
+        var RA_ck01 = document.getElementsByName("RA_ck01");
+        var RA_yn = 1;
+        for (var i = 0; i < RA_ck01.length; i++) {
+            if (!RA_ck01[i].checked) {
+                RA_yn = 0; ;
+            }
+        }
+        if (RA_yn == 1) {
+            alert("已全勾選");
+        } else {
+            alert("沒有全勾選");
+        }
+    }
+
+</script>
+
+
+
+
+</body>
+</html>
